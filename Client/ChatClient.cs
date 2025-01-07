@@ -32,4 +32,24 @@ class ChatClient
         }
     }
 
+    public void ReceiveMessages()
+    {
+        while (true)
+        {
+            try
+            {
+                string? message = reader.ReadLine();
+                if (message != null)
+                {
+                    Console.WriteLine("Received: " + message);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error receiving message: " + ex.Message);
+                break;
+            }
+        }
+    }
+
 }
