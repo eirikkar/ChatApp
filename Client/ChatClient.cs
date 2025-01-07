@@ -18,4 +18,18 @@ class ChatClient
     {
         return tcpClient;
     }
+
+    public void SendMessage()
+    {
+        while (true)
+        {
+            string? message = Console.ReadLine();
+            if (string.IsNullOrEmpty(message))
+            {
+                Console.WriteLine("Message cannot be empty");
+            }
+            writer.WriteLine(message);
+        }
+    }
+
 }
