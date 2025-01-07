@@ -52,4 +52,10 @@ class ChatClient
         }
     }
 
+    public void CloseConnection()
+    {
+        reader.Close();
+        writer.Close();
+        tcpClient.Close();
+    }
 }
