@@ -13,4 +13,9 @@ class ChatClient
         reader = new StreamReader(stream);
         writer = new StreamWriter(stream) { AutoFlush = true };
     }
+
+    public TcpClient StartClient()
+    {
+        return tcpClient;
+    }
 }
