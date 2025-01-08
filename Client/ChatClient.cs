@@ -46,7 +46,8 @@ class ChatClient
                 string? message = reader.ReadLine();
                 if (message != null)
                 {
-                    Console.WriteLine("Received: " + message);
+                    Console.WriteLine("Server returned: ");
+                    Console.WriteLine(message);
                 }
             }
             catch (Exception ex)
