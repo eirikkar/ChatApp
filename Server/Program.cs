@@ -4,6 +4,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        ChatServer chatServer = new ChatServer();
+        chatServer.StartServer(4444);
     }
 }
