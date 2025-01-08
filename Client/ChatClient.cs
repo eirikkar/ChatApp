@@ -16,7 +16,12 @@ class ChatClient
 
     public void StartClient()
     {
-        return tcpClient;
+        Console.WriteLine("Connected to the server!");
+        Console.WriteLine("Enter Message: ");
+        var sendThread = new Thread(SendMessage);
+        var receiveThread = new Thread(ReceiveMessages);
+        sendThread.Start();
+        receiveThread.Start();
     }
 
     public void SendMessage()
